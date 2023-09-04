@@ -30,13 +30,13 @@ jobs:
       - run:
           name: create virtualenv
           command: |
-            cd project-ml-microservice-kubernetes
+            cd Project-ML-Microservice-Kubernetes
             make setup
 
       - run:
           name: install dependencies
           command: |
-            cd project-ml-microservice-kubernetes
+            cd Project-ML-Microservice-Kubernetes
             python3 -m venv venv
             . .devops/bin/activate
             make install
@@ -53,7 +53,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            cd project-ml-microservice-kubernetes
+            cd Project-ML-Microservice-Kubernetes
             . .devops/bin/activate
             make test
       # run lints!
@@ -61,6 +61,6 @@ jobs:
       - run:
           name: run lint
           command: |
-            cd project-ml-microservice-kubernetes
+            cd Project-ML-Microservice-Kubernetes
             . .devops/bin/activate
             make lint
