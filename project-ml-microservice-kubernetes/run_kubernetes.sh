@@ -20,4 +20,4 @@ kubectl get pods
 # Step 4:
 # Forward the container port to a host
 #kubectl port-forward deployment.apps/project-ml-microservice-kubernetes 8000:80
-kubectl port-forward tom-project-ml 8080:80
+kubectl port-forward tom-project-ml 8000:80
