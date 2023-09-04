@@ -30,13 +30,13 @@ jobs:
       - run:
           name: create virtualenv
           command: |
-            cd microservice-aws-and-kubernetes/project-ml-microservice-kubernetes
+            cd project-ml-microservice-kubernetes
             make setup
 
       - run:
           name: install dependencies
           command: |
-            cd microservice-aws-and-kubernetes/project-ml-microservice-kubernetes
+            cd project-ml-microservice-kubernetes
             . .devops/bin/activate
             make install
       - save_cache:
@@ -48,7 +48,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            cd microservice-aws-and-kubernetes/project-ml-microservice-kubernetes
+            cd project-ml-microservice-kubernetes
             . .devops/bin/activate
             make test
       # run lints!
@@ -56,6 +56,6 @@ jobs:
       - run:
           name: run lint
           command: |
-            cd microservice-aws-and-kubernetes/project-ml-microservice-kubernetes
+            cd project-ml-microservice-kubernetes
             . .devops/bin/activate
             make lint
